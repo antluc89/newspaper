@@ -10,6 +10,12 @@
 <h1>Все новости:</h1>
 <h3>{{ time_now|date:'M d Y' }}</h3>
 <hr>
+
+{% load cache %}
+{% cache 30 submit %}
+    <a class="btn btn-primary" type="submit" href="subscriptions/">Управление подписками</a>
+{% endcache %}
+
 {% if news %}
     <table>
         <tr>

@@ -6,7 +6,6 @@ from .models import PostCategory, Post
 from django.contrib.auth.models import User
 from django.core.mail import EmailMultiAlternatives
 from .tasks import send_email_task, weekly_send_mail_task
-from NewsPaper.NewsPaper import settings
 
 
 @receiver(m2m_changed, sender=PostCategory)
